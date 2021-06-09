@@ -60,8 +60,7 @@ stories.add(
 		</Button>
 	),
 	{
-		info:
-			'A micro Button requires `ts-micro` and one of `ts-primary` `ts-secondary` `ts-tertiary` className',
+		info: 'A micro Button requires `ts-micro` and one of `ts-primary` `ts-secondary` `ts-tertiary` className',
 	},
 );
 

@@ -13,7 +13,9 @@ describe('Button', () => {
 	});
 
 	it('should render correctly having className', () => {
-		const wrapper = shallow(<Button className="ts-primary">Default button</Button>);
+		const wrapper = shallow(
+			<Button className="ts-primary">Default button</Button>,
+		);
 
 		expect(wrapper).toMatchSnapshot();
 	});

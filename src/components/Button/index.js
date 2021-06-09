@@ -11,7 +11,10 @@ const Button = ({ busy, ...props }) => {
 };
 
 Button.propTypes = {
-	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]),
 	busy: PropTypes.bool,
 	type: PropTypes.string,
 	className: PropTypes.string,

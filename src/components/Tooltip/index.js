@@ -22,7 +22,10 @@ Tooltip.defaultProps = {
 Tooltip.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string,
-	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]),
 };
 
 export default Tooltip;

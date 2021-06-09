@@ -19,7 +19,6 @@ stories.add(
 		);
 	},
 	{
-		info:
-			'Notes are toggled by rendering and removing them from the DOM. You can only have one note on a page at a time.',
+		info: 'Notes are toggled by rendering and removing them from the DOM. You can only have one note on a page at a time.',
 	},
 );

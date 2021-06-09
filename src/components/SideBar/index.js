@@ -7,7 +7,9 @@ const noop = () => {};
 class SideBar extends Component {
 	static wrapContent(nodes) {
 		const children = React.Children.toArray(nodes);
-		const wrappedTabs = children.every((node) => node.props['data-ts'] === 'Panel');
+		const wrappedTabs = children.every(
+			(node) => node.props['data-ts'] === 'Panel',
+		);
 		return nodes && wrappedTabs ? nodes : <div data-ts="Panel">{nodes}</div>;
 	}
 
@@ -66,7 +68,10 @@ class SideBar extends Component {
 }
 
 SideBar.propTypes = {
-	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]),
 	isLoading: PropTypes.bool,
 	isOpen: PropTypes.bool,
 	loadingMessage: PropTypes.string,
