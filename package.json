@@ -5,6 +5,7 @@
 	"module": "dist/esm/index.js",
 	"license": "SEE LICENSE IN LICENSE.md",
 	"scripts": {
+		"prepare": "husky install",
 		"build": "babel src/components --out-dir dist/esm --presets=@babel/preset-react && babel src/components --out-dir dist/cjs --presets=@babel/preset-react,@babel/preset-env",
 		"prepublish": "npm run build",
 		"build-storybook": "build-storybook",
@@ -13,7 +14,7 @@
 		"pretest": "eslint src",
 		"test": "react-scripts test --env=jsdom",
 		"test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
-		"prettier": "prettier --write --use-tabs --single-quote --print-width 100 --color src",
+		"prettier": "prettier --write --color src",
 		"report-coverage": "codecov",
 		"commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
 		"precommit": "lint-staged",
@@ -23,8 +24,7 @@
 	"lint-staged": {
 		"*.js": [
 			"eslint --color",
-			"prettier --write --use-tabs --single-quote --print-width 100 --color",
-			"git add"
+			"prettier --write --color"
 		]
 	},
 	"jest": {
@@ -68,9 +68,9 @@
 		"eslint-plugin-jest": "^24.3.6",
 		"eslint-plugin-jsx-a11y": "^6.4.1",
 		"eslint-plugin-react": "^7.24.0",
-		"husky": "^2.7.0",
+		"husky": "^6.0.0",
 		"jsdom": "^16.6.0",
-		"lint-staged": "^8.2.1",
+		"lint-staged": "^11.0.0",
 		"lodash": "^4.17.21",
 		"mini-css-extract-plugin": "^0.7.0",
 		"prettier": "^1.18.2",
