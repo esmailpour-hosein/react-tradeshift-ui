@@ -1,13 +1,16 @@
 {
-	"extends": ["airbnb", "eslint:recommended", "plugin:react/recommended"],
+	"extends": [
+		"airbnb",
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"prettier"
+	],
 	"plugins": ["jest"],
 	"env": {
 		"jest/globals": true,
 		"browser": true
 	},
 	"rules": {
-		"arrow-parens": ["error", "always"],
-		"comma-dangle": ["error", "always-multiline"],
 		"import/no-extraneous-dependencies": [
 			"error",
 			{
@@ -27,7 +30,6 @@
 		"react/forbid-prop-types": ["error", { "forbid": ["any"] }],
 		"object-curly-newline": "off",
 		"operator-linebreak": "off",
-		"indent": "off",
 		"react/jsx-props-no-spreading": "off"
 	},
 	"settings": {
