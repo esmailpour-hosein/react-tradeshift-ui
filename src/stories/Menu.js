@@ -7,7 +7,10 @@ const stories = storiesOf('Menu', module);
 
 stories.add('Basic usage', () => (
 	<Menu>
-		<MenuItem selected={boolean('selected', true)} disabled={boolean('disabled', false)}>
+		<MenuItem
+			selected={boolean('selected', true)}
+			disabled={boolean('disabled', false)}
+		>
 			Menu item 1
 		</MenuItem>
 		<MenuItem>Menu item 2</MenuItem>

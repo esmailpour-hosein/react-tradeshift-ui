@@ -5,7 +5,8 @@ import _ from 'lodash';
 
 const Table = (props) => {
 	const renderTable = (renderProps) => {
-		const { id, cols, rows, onbutton, linkable, pager, explode, selectable } = renderProps;
+		const { id, cols, rows, onbutton, linkable, pager, explode, selectable } =
+			renderProps;
 		window.ts.ui.get(`#${id}`, (table) => {
 			if (explode) {
 				table.explode();

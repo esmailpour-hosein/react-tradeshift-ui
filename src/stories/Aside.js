@@ -67,5 +67,7 @@ stories.add(
 			</Aside>
 		);
 	},
-	{ info: 'Aside may contain tabs content. Just define some Panels in specified format' },
+	{
+		info: 'Aside may contain tabs content. Just define some Panels in specified format',
+	},
 );

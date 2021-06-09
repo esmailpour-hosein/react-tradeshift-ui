@@ -4,7 +4,10 @@ import React from 'react';
 const Buttons = (props) => <menu data-ts="Buttons" {...props} />;
 
 Buttons.propTypes = {
-	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]),
 	className: PropTypes.string,
 };
 

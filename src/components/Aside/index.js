@@ -7,7 +7,9 @@ const noop = () => {};
 class Aside extends Component {
 	static wrapContent(nodes) {
 		const children = React.Children.toArray(nodes);
-		const isPanels = children.every((node) => node.props['data-ts'] === 'Panel');
+		const isPanels = children.every(
+			(node) => node.props['data-ts'] === 'Panel',
+		);
 		const isRootElements = children.find((node) => node.type === 'footer');
 
 		if (isPanels) {
@@ -54,7 +56,8 @@ class Aside extends Component {
 	}
 
 	render() {
-		const { autofocus, isLoading, loadingMessage, title, isOpen, className } = this.props;
+		const { autofocus, isLoading, loadingMessage, title, isOpen, className } =
+			this.props;
 		const busyMessage = isLoading ? loadingMessage : '';
 		const asideProps = {
 			'data-ts.autofocus': autofocus,
@@ -79,7 +82,10 @@ class Aside extends Component {
 }
 
 Aside.propTypes = {
-	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]),
 	autofocus: PropTypes.bool,
 	isLoading: PropTypes.bool,
 	isOpen: PropTypes.bool,

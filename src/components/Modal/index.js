@@ -56,7 +56,12 @@ class Modal extends Component {
 		});
 		return (
 			<Portal>
-				<dialog data-ts="Modal" {...modalProps} ref={this.onRef} className={dialogClass}>
+				<dialog
+					data-ts="Modal"
+					{...modalProps}
+					ref={this.onRef}
+					className={dialogClass}
+				>
 					<div data-ts="Panel">{this.props.children}</div>
 				</dialog>
 			</Portal>
@@ -65,7 +70,10 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]),
 	isOpen: PropTypes.bool,
 	onClose: PropTypes.func,
 	onClosed: PropTypes.func,

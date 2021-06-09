@@ -42,7 +42,6 @@ stories.add(
 		</Buttons>
 	),
 	{
-		info:
-			'Buttons component accepts attributes describes in `tradeshift-ui buttons` documentation page',
+		info: 'Buttons component accepts attributes describes in `tradeshift-ui buttons` documentation page',
 	},
 );

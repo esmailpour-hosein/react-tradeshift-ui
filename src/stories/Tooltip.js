@@ -8,4 +8,4 @@ stories.add('Basic usage', () => (
 	<Tooltip id="tooltip-example" title="hahha">
 		Tooltip will show on mouse hover.
 	</Tooltip>
-	));
+));

@@ -21,7 +21,11 @@ stories.add(
 				<h1>A Modal Example</h1>
 				<p>…</p>
 				<p>
-					<button type="submit" onClick={action('onClose')} className="ts-primary">
+					<button
+						type="submit"
+						onClick={action('onClose')}
+						className="ts-primary"
+					>
 						<span>Close the Modal</span>
 					</button>
 				</p>
@@ -60,7 +64,11 @@ stories.add(
 					<h1>A Modal Example</h1>
 					<p>…</p>
 					<p>
-						<button type="submit" onClick={action('onClose')} className="ts-primary">
+						<button
+							type="submit"
+							onClick={action('onClose')}
+							className="ts-primary"
+						>
 							<span>Close the Modal</span>
 						</button>
 					</p>

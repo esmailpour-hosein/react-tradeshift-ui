@@ -7,19 +7,30 @@ import { Header } from '../components';
 
 const stories = storiesOf('Header', module);
 
-stories.add('Change the title', () => <Header title={text('header title', 'My cool title')} />, {
-	info: 'The Header component accepts a "title" property.',
-});
+stories.add(
+	'Change the title',
+	() => <Header title={text('header title', 'My cool title')} />,
+	{
+		info: 'The Header component accepts a "title" property.',
+	},
+);
 
 stories.add(
 	'Change the color',
 	() => (
 		<Header
 			title="the title"
-			color={select('color', ['blue', 'dark', 'green', 'purple'], 'dark', 'foo-id-2')}
+			color={select(
+				'color',
+				['blue', 'dark', 'green', 'purple'],
+				'dark',
+				'foo-id-2',
+			)}
 		/>
 	),
-	{ info: 'The Header component accepts a "color" property to change the color.' },
+	{
+		info: 'The Header component accepts a "color" property to change the color.',
+	},
 );
 
 stories.add(

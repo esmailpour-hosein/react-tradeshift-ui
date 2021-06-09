@@ -7,12 +7,20 @@ const stories = storiesOf('Table', module);
 stories.add('Basic usage', () => {
 	const tableConfig = {
 		cols: [{ label: 'One' }, { label: 'Two' }, { label: 'Three' }],
-		rows: [['A', 'D', 'G'], ['B', 'E', 'H'], ['C', 'F', 'I']],
+		rows: [
+			['A', 'D', 'G'],
+			['B', 'E', 'H'],
+			['C', 'F', 'I'],
+		],
 	};
 	const shouldShow = boolean('shouldShow', false);
 	return shouldShow ? (
 		<div style={{ height: 200 }}>
-			<Table id="profile-table" cols={tableConfig.cols} rows={tableConfig.rows} />
+			<Table
+				id="profile-table"
+				cols={tableConfig.cols}
+				rows={tableConfig.rows}
+			/>
 		</div>
 	) : null;
 });

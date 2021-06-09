@@ -46,9 +46,13 @@ stories.add(
 	},
 );
 
-stories.add('Hide bar', () => <StatusBar visible={boolean('visible', false)} />, {
-	info: `The StatusBar component accepts a "message" prop in a string format.
+stories.add(
+	'Hide bar',
+	() => <StatusBar visible={boolean('visible', false)} />,
+	{
+		info: `The StatusBar component accepts a "message" prop in a string format.
 	In addition, a "linkable" prop can also be passed
 	which will render links in the message if this prop evaluates to true
 	No message will be displayed if this prop is empty or not passed`,
-});
+	},
+);
