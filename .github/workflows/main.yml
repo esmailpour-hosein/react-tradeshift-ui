@@ -1,0 +1,33 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches-ignore:
+      - v[0-9]*.[0-9]*.[0-9]*
+
+jobs:
+  validate:
+    name: Build and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: 'npm'
+
+      - name: 📥 Download
+        run: npm ci
+
+
+      - name: 🔍️ Run tests
+        run: |
+          npm prune
+          npm run lint
+          npm test -- --coverage --collectCoverageFrom=src/components/**/*.js
+          npm run report-coverage
